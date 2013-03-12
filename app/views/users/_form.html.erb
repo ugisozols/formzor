@@ -1,0 +1,9 @@
+<%= form_for @user, :builder => RailsFormsExample::UgisBuilder, :html => { :class => "form-horizontal" } do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.text_field :surname %>
+
+  <%= f.number_field :age %>
+
+  <%= f.submit %>
+<% end %>
