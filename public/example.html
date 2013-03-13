@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Example Forms</title>
+  <meta name="author" content="Uģis Ozols, Peter Tellgren">
+  <link rel="stylesheet" href="/assets/application.css" type="text/css">
+</head>
+<body>
+
+<h2>Example Forms</h2>
+
+<form>
+  <fieldset>
+    <legend>Normal Form:</legend>
+    <label>Name</label>
+    <input type="text" placeholder="Name…">
+    <small>Example block-level help text here.</small>
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+
+
+<form class="horizontal">
+  <fieldset>
+    <legend>Horizontal Form:</legend>
+    <label>
+      <span>Full name</span>
+      <input type="text" name="name" id="name" placeholder="Full Name..."/>
+      <small>Example block-level help text here.</small>
+    </label>
+    <label>
+      <span>Email</span>
+      <input type="text" name="email" id="email" placeholder="Email..."/>
+    </label>
+    <label>
+      <span>Subject</span>
+      <input type="text" name="subject" id="subject" placeholder="Subject..."/>
+    </label>
+    <label>
+      <span>Message</span>
+      <textarea name="feedback" id="feedback" rows="4"></textarea>
+    </label>
+    <label>
+      <span>Single Select</span>
+      <select>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+    </label>
+    <label>
+      <span>Multiple Select</span>
+      <select multiple="multiple">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+      </select>
+    </label>
+    <fieldset>
+      <label class="radio">
+        <input type="radio">
+        <span>Radio Button 1</span>
+      </label>
+      <label class="radio">
+        <input type="radio">
+        <span>Radio Button 2</span>
+      </label>
+    </fieldset>
+    <label class="checkbox">
+      <input type="checkbox"> <span>Remember me</span>
+    </label>
+    <input type="button" value="Submit" />
+  </fieldset>
+</form>
+
+
+<form class="horizontal">
+  <fieldset>
+    <legend>Error States:</legend>
+    <label class="warning">
+      <span>Warning</span>
+      <input type="text" name="name" id="name" placeholder=""/>
+      <small>A Warning message</small>
+    </label>
+    <label class="error">
+      <span>Error</span>
+      <input type="text" name="name" id="name" placeholder=""/>
+      <small>An Error Message</small>
+    </label>
+    <label class="success">
+      <span>Success</span>
+      <input type="text" name="name" id="name" placeholder=""/>
+      <small>An Success Message</small>
+    </label>
+  </fieldset>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+@import "formzor_variables";
+@import "formzor_typography";
+@import "formzor_states";
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+*{ margin:0; padding:0;}
+body{ font:100% normal Arial, Helvetica, sans-serif; background: white; text-align: center; }
+input,select,textarea{margin:0; padding:0;}
+
+form {
+  padding: 10px;
+  margin:0 auto 20px;
+  width:500px;
+
+  border-color: $form-border-color;
+  border-style: $form-border-style;
+  border-width: $form-border-width;
+  background: $form-background-color;
+  @include border-radius($form-border-radius);
+  // input stylet
+  select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    border-color: $input-border-color;
+    border-style: $input-border-style;
+    border-width: $input-border-width;
+    @include border-radius($input-border-radius);
+    height: 20px;
+    padding: 4px 6px;
+    margin-bottom: 0px;
+    background: $input-background-color;
+     &:focus {
+      border-color: darken($input-border-color, 50%);
+      outline: 0;
+    }
+  }
+  textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    background: $input-background-color;
+    border-color: $input-border-color;
+    border-style: $input-border-style;
+    border-width: $input-border-width;
+    @include border-radius($input-border-radius);
+    &:focus {
+      border-color: darken($input-border-color, 50%);
+      outline: 0;
+    }
+  }
+  textarea {
+    height: auto;
+  }
+  select, input[type="file"] {
+    height: 30px;
+    line-height: 30px;
+  }
+  select[multiple], select[size] {
+    height: auto;
+  }
+  fieldset {
+    position:relative;
+    //border-color: $form-border-color;
+    //border-style: $form-border-style;
+    //border-width: $form-border-width;
+    border:0;
+    fieldset {
+      padding: 10px 0px;
+      border: 0px;
+    }
+    legend {
+      border-bottom-color: $legend-border-color;
+      border-bottom-style: $legend-border-style;
+      border-bottom-width: $legend-border-width;
+      background: $legend-background-color;
+      display: block;
+      padding: 5px 0 10px 5px;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    small {
+      display: block;
+    }
+    label {
+      width:100%;
+      display: block;
+      padding-top:10px;
+      border-color: $line-border-color;
+      border-style: $line-border-style;
+      border-width: $line-border-width;
+      background: $line-background-color;
+      @include border-radius($line-border-radius);
+      span {
+        display: block;
+        float:left;
+        width:100px;
+        padding:5px 20px 0 0;
+      }
+      small {
+        margin-left: 120px;
+      }
+      textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+        width: 200px;
+        margin-bottom: 0px;
+      }
+      select {
+        width: 200+20px;
+      }
+    }
+    button, input[type="button"] {
+      display: inline-block;
+      padding: 4px 12px;
+      margin: 10px 0px 0px;
+      color: #333333;
+      cursor: pointer;
+      background-color: #f5f5f5;
+      border: 1px solid #cccccc;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+    }
+  }
+  &.horizontal {
+    button, input[type="button"], p {
+      margin-left: 120px;
+    }
+    label {
+       padding-bottom: 10px;
+    }
+    label.radio {
+      padding-top: 0px;
+    }
+    label.checkbox, label.radio {
+      input {
+        margin-left: 120px;
+      }
+      span {
+        display: inline;
+        float: none;
+      }
+    }
+  }
+}

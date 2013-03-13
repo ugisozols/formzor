@@ -1,0 +1,32 @@
+form label {
+  &.error {
+    textarea, input {
+      border-color: $form-error-color;
+      background: lighten($form-error-color, 20%);
+      &:focus {
+        border-color: $form-error-color;
+        background: white;
+      }
+    }
+  }
+  &.warning {
+    textarea, input {
+      border-color: $form-warning-color;
+      background: lighten($form-warning-color, 20%);
+      &:focus {
+        border-color: $form-warning-color;
+        background: white;
+      }
+    }
+  }
+  &.success {
+    textarea, input {
+      border-color: $form-success-color;
+      background: lighten($form-success-color, 20%);
+      &:focus {
+        border-color: $form-success-color;
+        background: white;
+      }
+    }
+  }
+}

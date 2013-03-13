@@ -1,0 +1,49 @@
+// ------------
+// Typography
+// ------------
+$font-weight: normal;
+$line-height: 1.65;
+$font-size: 112.5; // percentage value (16 * 112.5% = 18px)
+$font-base: 16 * ($font-size/100); // converts our percentage to a pixel value
+$font-family: sans-serif;
+
+// ------------
+// Colors
+// ------------
+
+$form-error-color: #b94a48;
+$form-warning-color: #c09853;
+$form-success-color: #468847;
+
+
+$form-text-color: #333;
+$form-background-color: white;
+$form-border-color: #ccc;
+$form-border-width: 1px;
+$form-border-style: solid;
+$form-border-radius: 4px;
+
+// 1. Legend
+$legend-text-color: #333;
+$legend-background-color: white;
+$legend-border-color: #ccc;
+$legend-border-width: 1px;
+$legend-border-style: solid;
+$legend-border-radius: 4px;
+
+
+// 2. input
+$input-text-color: #555;
+$input-background-color: white;
+$input-border-color: #ccc;
+$input-border-width: 1px;
+$input-border-style: solid;
+$input-border-radius: 4px;
+
+// 3. Lines
+$line-text-color: #555;
+$line-background-color: white;
+$line-border-color: white;
+$line-border-width: 0px;
+$line-border-style: solid;
+$line-border-radius: 0px;
